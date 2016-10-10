@@ -2,13 +2,16 @@
  
 var answer1 = function(){
 	var total=0;
+	//Get prices for all items.
 	var allPrices = items.map(function(item) {
  		return item.price;
  	});
+ 	//Adding the prices to get total price.
  	var addToTotal = function(price){
 		total +=  price;
 	}
 	allPrices.forEach(addToTotal);
+	//Determine average and format result.
 	var average = total/allPrices.length;
 	var resultValue = average.toFixed(2);
 	var resulti = "The average price is $"+resultValue;
@@ -22,8 +25,10 @@ answer1();
 	
 // ques-2
 var answer2 = function(){
+
  	var givenFilter = function(items){
- 	var price = items.price;
+ 		var price = items.price;
+ 		//Checks to find the items in the given price range.
  		if(price>14&&price<18){
  			return true;
  		}else{ return false;}
@@ -44,6 +49,7 @@ answer2();
 //ques-3
 var answer3 = function(){
 	var searchCurrencyCode = function(item){
+		//Check for the required currency code.
 		if(item.currency_code === "GBP"){
 			return true;
 		}else return false;
@@ -52,6 +58,7 @@ var answer3 = function(){
 	var name;
 	var cost;
 	var statements =[];
+	//Required fields extracted from arrays of object.
 	var getData = function(object){
 		name = object.title;
 		cost = object.price;
@@ -67,6 +74,7 @@ answer3();
 //ques-4
 var answer4 = function(){
 	var getMaterialsMadeOfWood = function(material) {
+		// Check to find the required material from material list.
 		if(material == 'wood') {
 			return true;
 		}
@@ -75,7 +83,7 @@ var answer4 = function(){
 
 	var getItemsMadeOfWood = function(item){
 		var materialsMadeOfWood = item.materials.filter(getMaterialsMadeOfWood);
-
+		// Check to find if there is an empty array.
 		if(materialsMadeOfWood.length == 0) {
 			return false;
 		}
@@ -101,6 +109,7 @@ answer4();
 var answer5 = function(){
 	var getMaterials = function(item){
 		var listOfMaterials = item.materials;
+		//To check the total number of materials in an item.
 		if (listOfMaterials.length>=8) {
 			return true;
 		}else { return false;}
@@ -123,6 +132,7 @@ answer5();
 var answer6 = function(){
 	var checkWhoMade = function(item){
 		var whoMade = item.who_made;
+		//To check for the seller.
 		if(whoMade =="i_did"){
 			return true;
 		}else {return false;}
