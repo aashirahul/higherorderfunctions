@@ -1,0 +1,23 @@
+h3{
+	text-align: center;
+	background: #eeeeee;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+.answers{
+	width: 100%;
+	background: #eeeeee;
+}
+.answer{
+	width:100%;
+	text-align: center;
+	padding-bottom: 5px;
+}
+.end-bar{
+	width: 100%;
+	height: 80px;
+	background-color:#4b484f;
+	text-align: center;
+	box-sizing:border-box;
+	padding-top: 30px;
+}
